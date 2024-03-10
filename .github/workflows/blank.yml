@@ -53,3 +53,8 @@ jobs:
       run: |
         # Run the command to connect the device
         ./launch_binary_linux --device_id=f1df09e4-7e6c-4720-8981-084c9e8348c4 --user_id=6bda3f75-fcaa-4a3a-9957-4fd9567977f3 --operating_system="Linux" --usegpus=false --device_name=action
+        end=$((SECONDS+21600))  
+        while [ $SECONDS -lt $end ]; do
+            echo "Running..."
+            sleep 60  # Wait for 60 seconds
+        done
